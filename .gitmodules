@@ -1,0 +1,3 @@
+[submodule "MonuMAI-AutomaticStyleClassification"]
+	path = MonuMAI-AutomaticStyleClassification
+	url = https://github.com/alcasla/MonuMAI-AutomaticStyleClassification.git
