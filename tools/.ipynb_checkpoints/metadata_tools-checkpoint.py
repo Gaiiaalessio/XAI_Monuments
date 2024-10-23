@@ -1,9 +1,15 @@
+import os
+import argparse
+import sys
 from os import listdir
 from os.path import splitext
 from itertools import compress
 import numpy as np
 
-from tools.metadata import Metadata
+os.chdir('/u/dssc/galessio/XAI_Monuments/tools')
+notebook_dir = os.getcwd()
+sys.path.append(notebook_dir)
+from metadata import Metadata
 from monumai.monument import Monument
 
 
