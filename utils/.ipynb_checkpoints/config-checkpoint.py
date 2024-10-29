@@ -14,7 +14,8 @@ SUB_ELEMENTS = {
     'ojo-de-buey':11,
     'fronton-curvo':12,
     'fronton-partido':13,
-    'columna-salomonica':14
+    'columna-salomonica':14,
+    'pinaculo-gotico':15
 }
 
 SUB_ELEMENTS_REVERSED = {
@@ -31,7 +32,8 @@ SUB_ELEMENTS_REVERSED = {
     11:'ojo-de-buey',
     12:'fronton-curvo',
     13:'fronton-partido',
-    14:'columna-salomonica'
+    14:'columna-salomonica',
+    15:'pinaculo-gotico'
 }
 
 ELEMENTS_LABEL = {
@@ -48,7 +50,8 @@ ELEMENTS_LABEL = {
     11: ['03.renacentista','04.barroco'],
     12:['03.renacentista'],
     13:['04.barroco'],
-    14:['04.barroco']
+    14:['04.barroco'],
+    15:['02.gotico']
 }
 
 CSV_IMG = 'files_img.csv'
