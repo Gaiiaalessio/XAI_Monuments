@@ -71,7 +71,7 @@ class Metadata:
 			# for each element save class and score
 			for obj in range(len(predictions)):
 				self.object_classes.append(predictions[obj]['class'])
-				self.object_scores.append(np.float(predictions[obj]['score']))		# score np.float
+				self.object_scores.append(float(predictions[obj]['score']))		# score np.float
 
 	def load_metadata_xml(self):
 		print('Load .xml metadata: ', self.filepath)
@@ -83,4 +83,4 @@ class Metadata:
 			for object in annotation:
 				elem_name = object.getElementsByTagName('name')[0]		# look for element name by tag
 				self.object_classes.append(elem_name.firstChild.data)		# apprend the element tag
-				self.object_scores.append(np.float(1))  					# score np.float = 1.0 = ground truth
+				self.object_scores.append(float(1))  					# score np.float = 1.0 = ground truth

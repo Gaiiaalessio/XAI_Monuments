@@ -117,18 +117,21 @@ def compute_json_detection(detector, loader, path, dataset = 'MonumenAI'):
                 })
             
         for k in range(len(r_b)):
-            box = r_b[k]/224.
-            local_result = {
-                "bndbox" : {
-                    "xmin": str(box[0]),
-                    "ymin": str(box[1]),
-                    "ymax": str(box[3]),
-                    "xmax": str(box[2])
-                },
-                "score" : str(scores[k]),
-                "class" : reverse_dic[classes[k]]
-            }
-            condensced_results["object"].append(local_result)
+            if classes[k] in reverse_dic:
+                print("classes[k]=", classes[k])
+                box = r_b[k]/224.
+                local_result = {
+                    "bndbox" : {
+                        "xmin": str(box[0]),
+                        "ymin": str(box[1]),
+                        "ymax": str(box[3]),
+                        "xmax": str(box[2])
+                    },
+                    "score" : str(scores[k]),
+                    "class" : reverse_dic[classes[k]]
+                }
+                condensced_results["object"].append(local_result)
+            else: print("Not in reverse dic classes[k]=", classes[k])
         local_path = os.path.join(path,information_about_class[condensced_results["true_label"]] + '_' + img_name.split('/')[-1][:-4] + '.json')
         with open(local_path, 'w') as fp:
             json.dump(condensced_results, fp)
