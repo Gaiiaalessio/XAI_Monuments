@@ -6,7 +6,7 @@ from os.path import splitext
 from itertools import compress
 import numpy as np
 
-os.chdir('/u/dssc/adellasiega/XAI_Monuments/tools')
+os.chdir(os.path.expanduser('~/XAI_Monuments/tools'))
 notebook_dir = os.getcwd()
 sys.path.append(notebook_dir)
 from metadata import Metadata
