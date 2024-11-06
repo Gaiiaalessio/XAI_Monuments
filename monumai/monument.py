@@ -30,7 +30,7 @@ class Monument:
     def __get_element_scores(self, element):
         # get index of element and return their scores
         elem_indx = [i for i,x in enumerate(self.__metadata.object_classes) if x==element]      # indexes of element
-        scores = np.asarray(self.__metadata.object_scores, dtype=np.float)
+        scores = np.asarray(self.__metadata.object_scores, dtype=float)
         return scores[elem_indx]
 
     # return array contains the score aggregation
