@@ -1,4 +1,4 @@
-import torch, os
+import torch
 from torchvision import datasets, transforms as T
 from torch.utils.data import Dataset
 from PIL import Image 

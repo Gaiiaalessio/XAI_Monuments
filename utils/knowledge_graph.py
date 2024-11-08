@@ -154,7 +154,7 @@ def GED_metric(features,shap_values,threshold=0.001,dataset='MonumenAI'):
     for i in range(len(shap_array)):
         FG = nx.Graph()
         for k in range(shap_array.shape[-1]):
-            facade = np.copy(shap_array[i,:,k])*features[i]
+            facade = np.copy(shap_array[i,:,k]) * features[i, :shap_array.shape[1]]
             facade[facade<threshold] = 0
             facade[facade>=threshold] = 1
             facade = facade.astype(np.uint8)
@@ -166,7 +166,7 @@ def GED_metric(features,shap_values,threshold=0.001,dataset='MonumenAI'):
                         index = reversed_index_dic[names[j]]
                         FG.add_node(index, name=names[j])
                         FG.add_edge(style_index, index)
-            facade = np.copy(shap_array[i,:,k])*(features[k] == False)
+            facade = np.copy(shap_array[i,:,k]) * (features[i, :shap_array.shape[1]] == False)
             inter_facade = np.copy(facade)
             facade[inter_facade>=threshold] = 0
             facade[inter_facade<threshold] = 1
