@@ -1,9 +1,9 @@
-# architectural_style_classification
-# Usage
+# Architectural Style Classification
+## Usage
 Provide path to the data inside config.py
 It is expected to follow the branching present originally in the dataset, otherwise perform adequat change to config.py and dataloader.py
 
-# Folder organisation
+## Folder organisation
 * Root
     * Data
         * Dataset-IGRB1092_14cls
@@ -18,11 +18,11 @@ It is expected to follow the branching present originally in the dataset, otherw
 
 If the folder organisation if different, change the various import path + the config.py file.
 
-# How to run
+## How to run
 
 First run 'python build-csv.py'
 Then 'train.py' default parameter should work
 
-# Models
+## Models
 
 Models can be found at : https://cloud.minesparis.psl.eu/index.php/s/TBKECKgGZoMp1aQ
